@@ -29,19 +29,19 @@ export class SoundManager {
         const oscillator = this.audioCtx.createOscillator();
         const gainNode = this.audioCtx.createGain();
 
-        oscillator.type = 'triangle';
-        oscillator.frequency.setValueAtTime(800, this.audioCtx.currentTime);
-        oscillator.frequency.linearRampToValueAtTime(1200, this.audioCtx.currentTime + 0.1);
-        oscillator.frequency.linearRampToValueAtTime(1500, this.audioCtx.currentTime + 0.3);
+        // Smoother (sine) and lower pitch
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(300, this.audioCtx.currentTime);
+        oscillator.frequency.linearRampToValueAtTime(500, this.audioCtx.currentTime + 0.4);
 
-        gainNode.gain.setValueAtTime(0.2, this.audioCtx.currentTime);
-        gainNode.gain.linearRampToValueAtTime(0.2, this.audioCtx.currentTime + 0.2);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioCtx.currentTime + 0.5);
+        gainNode.gain.setValueAtTime(0.3, this.audioCtx.currentTime);
+        gainNode.gain.linearRampToValueAtTime(0.3, this.audioCtx.currentTime + 0.1);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioCtx.currentTime + 0.6);
 
         oscillator.connect(gainNode);
         gainNode.connect(this.audioCtx.destination);
 
         oscillator.start();
-        oscillator.stop(this.audioCtx.currentTime + 0.5);
+        oscillator.stop(this.audioCtx.currentTime + 0.6);
     }
 }
