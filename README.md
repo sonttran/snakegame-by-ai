@@ -1,5 +1,7 @@
 # 🐍 3D Snake Game
 
+**[Play the Demo](https://snakegame-by-ai-sonttran-demo.netlify.app)**
+
 A modern, colorful 3D Snake Game built with **Three.js** and **Vanilla JavaScript**.
 
 Features include:
