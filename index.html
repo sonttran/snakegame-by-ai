@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Snake</title>
+</head>
+
+<body>
+  <div id="game-ui">
+    <div id="score-board">Score: <span id="score">0</span></div>
+    <div id="special-timer" class="hidden">Special: <span id="timer-val">5.0</span>s</div>
+    <div id="game-over" class="hidden">
+      <h1>Game Over</h1>
+      <p>Final Score: <span id="final-score">0</span></p>
+      <button id="restart-btn">Restart</button>
+    </div>
+    <div id="start-screen">
+      <h1>3D Snake</h1>
+      <p>Use Arrow Keys to Move</p>
+      <button id="start-btn">Start Game</button>
+    </div>
+  </div>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
