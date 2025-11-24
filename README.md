@@ -23,7 +23,7 @@ Follow these instructions to get the project running locally on your machine.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/<YOUR_USERNAME>/snakegame-by-ai.git
+    git clone https://github.com/sonttran/snakegame-by-ai.git
     cd snakegame-by-ai
     ```
 
